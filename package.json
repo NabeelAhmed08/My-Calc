@@ -1,0 +1,80 @@
+{
+  "name": "my-calc",
+  "productName": "Calc Neomorphic",
+  "version": "1.0.0",
+  "description": "A simple Calculator application",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+
+  "build" : {
+    "appId" : "my-calc",
+    "win":{
+      "target": ["nsis"],
+      "icon": "src/assets/favicon/favicon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/assets/favicon/favicon.ico",
+      "uninstallerIcon": "src/assets/favicon/favicon.ico",
+      "uninstallDisplayName": "Calc Neomorphic",
+      "license": "license.txt",
+      "oneClick" : false,
+      "allowToChangeInstallationDirectory" : true
+    }
+  },
+
+
+
+  "keywords": [],
+  "author": {
+    "name": "Nabeel Ahmed",
+    "email": "67134707+NabeelAhmed08@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "my_calc"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron-builder": "^22.9.1",
+    "electron": "11.2.3"
+  }
+}

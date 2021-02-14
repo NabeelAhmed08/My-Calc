@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calc - Neomorphic</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  </head>
+  <body>
+
+    <header id="titlebar">
+      <div id="drag-region">
+
+        <div id="window-title">
+          <span>Calc - Neomorphic</span>
+        </div>
+
+        <div id="window-controls">
+
+          <div class="button" id="min-button">
+            <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="close-button">
+            <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+  
+
+      <div class="container" id="main">
+        <div class="cal-box">
+            <form action="" name="calculator">
+                <input id="display" type="text" name="display" placeholder="0" readonly>
+                <br>
+                <input type="button" class="button-ca" value="7" onclick="calculator.display.value +='7'">
+                <input type="button" class="button-ca" value="8" onclick="calculator.display.value +='8'">
+                <input type="button" class="button-ca" value="9" onclick="calculator.display.value +='9'">
+                <input  type="button" class="button-ca mathbutton" value="+" onclick="calculator.display.value +='+'">
+                <br>
+
+                <input type="button" class="button-ca" value="4" onclick="calculator.display.value +='4'">
+                <input type="button" class="button-ca" value="5" onclick="calculator.display.value +='5'">
+                <input type="button" class="button-ca" value="6" onclick="calculator.display.value +='6'">
+                <input type="button" class="button-ca mathbutton" value="-" onclick="calculator.display.value +='-'">
+                <br>
+
+                <input type="button" class="button-ca" value="1" onclick="calculator.display.value +='1'">
+                <input type="button" class="button-ca" value="2" onclick="calculator.display.value +='2'">
+                <input type="button" class="button-ca" value="3" onclick="calculator.display.value +='3'">
+                <input type="button" class="button-ca mathbutton" value="X" onclick="calculator.display.value +='*'">
+                <br>
+
+                <input class="button-ca clearButton " type="button" value="C" onclick="calculator.display.value =''">
+                <input type="button" class="button-ca" value="0" onclick="calculator.display.value +='0'">
+                <input  type="button" class="button-ca mathbutton" value="=" onclick="calculator.display.value = eval(calculator.display.value) ">
+                <input  type="button" class="button-ca mathbutton" value="/" onclick="calculator.display.value +='/'">
+                <br>
+
+            </form>
+            <div class="make">
+              <span > Made with &#10084;&#65039; by Nabeel Ahmed</span>
+            </div>
+        
+        </div>
+        
+    </div>
+
+     
+
+
+
+
+
+
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
