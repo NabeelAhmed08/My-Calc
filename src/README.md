@@ -1,15 +1,12 @@
-## Installation of complete example app
+## Installation of calculator app
 
-(For the tutorial starting point app, see the [`src-start` directory](/src-start))
 
-Assuming you have [Node](https://nodejs.org/en/) installed, clone this repo and run `npm install` in the `src` directory.
+Assuming you have [Node](https://nodejs.org/en/) installed, clone this repo and run `npm install` in the `My-Calc` directory.
 
 #### Command line:
 
 ```
-git clone https://github.com/binaryfunt/electron-seamless-titlebar-tutorial.git
-
-cd electron-seamless-titlebar-tutorial/src
+git clone https://github.com/NabeelAhmed08/My-Calc.git
 
 npm install
 
